@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --Paleblue: hsl(225, 100%, 94%);
+    --Brightblue: hsl(245, 75%, 52%);
+
+    --Verypaleblue: hsl(225, 100%, 98%);
+    --Desaturatedblue: hsl(224, 23%, 55%);
+    --Darkblue: hsl(223, 47%, 23%);
+}
+
+body{
+    font-family: 'Red Hat Display', sans-serif;
+    background-color: var(--Paleblue); 
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 2rem;
+}
+
+.card{
+    min-width: 320px;
+    max-width: 375px;
+    border-radius: 20px;
+    background-color: white;
+    overflow: hidden;
+    .hero{
+        img{
+            width: 100%;
+            object-fit: cover;
+            border-radius: 20px 20px 0 0;
+            transform: scale(1.01);
+        }
+    }
+    .body-card{
+        padding: 30px 20px;
+
+        h1{
+            text-align: center;
+            font-weight: 900;
+        }
+        p{
+            text-align: center;
+            color: var(--Desaturatedblue);
+            line-height: 1.5;
+            margin-top: 1rem;
+        }
+
+        .offer{
+            background-color: var(--Verypaleblue);
+            padding: 1.5rem;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
+        }
+
+        .offer-left{
+            
+            img{
+                float: left;
+                margin-right: 1rem;
+            }
+            span{
+                line-height: 1.6;
+            }
+
+            .anual-plan{
+                font-weight: 900;
+            }
+            .price{
+                color: var(--Desaturatedblue);
+            }
+
+        }
+        .offer-link{
+           color: var(--Brightblue);
+        }
+
+        .btns{
+            display: flex;
+            flex-direction: column;
+            margin-top: 1rem;
+            align-items: center;
+            
+
+            a{
+                text-decoration: none;
+                display: block;
+               
+            }
+            .btn-primary{
+                background-color: var(--Brightblue);
+                color: white;
+                font-weight: 700;
+                padding: 1rem;
+                width: 100%;
+                text-align: center;
+                border-radius: 8px;
+                box-shadow: 0 10px 20px var(--Desaturatedblue);
+                margin-bottom: 2rem;
+                
+            }
+            .btn-secondary{
+                color: var(--Darkblue);
+                font-weight: 700;
+            }
+        }
+
+    }
+}
+
+@media(min-width:768px){
+    body{
+        background: url(/images/pattern-background-desktop.svg), var(--Paleblue);
+        background-position: 0 -15vh, 0 0;
+        background-repeat: no-repeat;
+        
+       
+}
+}
